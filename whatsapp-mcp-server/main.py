@@ -249,4 +249,7 @@ def download_media(message_id: str, chat_jid: str) -> Dict[str, Any]:
 if __name__ == "__main__":
     # Initialize and run the server
     # mcp.run(transport='stdio')
-    mcp.run(transport='http', host='0.0.0.0', port=11434)
+    mcp.serve(
+        transport="http",
+        config={"host": "0.0.0.0", "port": 11434}
+    )
